@@ -90,10 +90,10 @@ h1, h2, h3 {
     margin: 2rem 0;
 }
 
+/* Contenedor ajustado sin recortes */
 .media-aspect-wrapper {
-    width: 55%;          /* Más pequeño */
-    max-width: 300px;    /* Uniforme */
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 500px;   /* Tamaño mediano */
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.7);
@@ -102,11 +102,13 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
+/* IMÁGENES Y VIDEOS sin recortar ni achatar */
 .media-aspect-wrapper img,
 .media-aspect-wrapper video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;            /* Mantiene proporción */
+    object-fit: contain;     /* No recorta nada */
+    display: block;
 }
 
 /* Texto centrado debajo */
