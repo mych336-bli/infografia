@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/* ------------------------------------------- */
+/* FONDO Y CUERPO (GIF Mario) */
+/* ------------------------------------------- */
+body {
+    background: url("fondo/fondo mario.gif") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+    padding: 20px 0;
+    overflow-x: hidden;
+}
+
+/* Contenedor glass */
+.main-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    width: 95%;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    position: relative;
+    z-index: 2; /* texto sobre imágenes */
+}
+
+/* ------------------------------------------- */
+/* TEXTO RESALTADO Y ENCIMA DE TODO */
+/* ------------------------------------------- */
+main p,
+h1, h2, h3,
+.caption {
+    position: relative;
+    z-index: 5;
+    text-shadow: 0 0 10px black; /* texto resaltado */
+    color: #fff;
+}
+
+/* Párrafos */
+main p {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600; 
+    margin: 0.5rem auto 1.5rem auto; 
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: white;
+    color: #a00000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #ffe2e2;
+}
+
+/* ------------------------------------------- */
+/* CENTRADO Y TAMAÑO DE IMÁGENES Y VIDEOS */
+/* ------------------------------------------- */
+.media-block {
+    display: flex;
+    flex-direction: column; /* Imagen/video arriba, texto abajo */
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.media-aspect-wrapper {
+    width: 55%;          /* Más pequeño */
+    max-width: 300px;    /* Uniforme */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+}
+
+.media-aspect-wrapper img,
+.media-aspect-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto centrado debajo */
+.caption,
+main p {
+    text-align: center;
+    margin-top: 1rem;
+    max-width: 700px;
+}

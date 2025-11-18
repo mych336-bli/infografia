@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Diseño de Circuitos Secuenciales</title>
+    <link rel="stylesheet" href="estilo.css"> 
+</head>
+<body>
+
+    <header class="hero-section">
+        <h1>Diseño y Simulación de Máquinas de Estado</h1>
+        <p>Exploración de los pasos fundamentales, desde el álgebra de Boole hasta la implementación práctica en simuladores como Tinkercad y Proteus.</p>
+    </header>
+
+    <main>
+        
+        <section id="teoria-diseño" class="info-section">
+            <h2>1. Definición y Diagrama de la Máquina de Estado</h2>
+            <p>El diseño de sistemas complejos comienza con la definición clara del problema y su representación gráfica mediante un Diagrama de Estados. Esto permite modelar el comportamiento del sistema según sus entradas y salidas.</p>
+            
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img 1.jpg" alt="Enunciado y Diagrama de Estados para un montacargas">
+                </div>
+                <p class="caption">**Análisis del Problema (Máquina de Mealy):** Presenta el enunciado del montacargas y su diagrama inicial. Tres estados definidos: Parado (E1), Bajando (E2) y Subiendo (E3), con transiciones basadas en las entradas P1, P2, S1 y S2. Esto establece la base para la simulación y control del sistema.</p>
+            </div>
+            
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img2.jpg" alt="Diagrama de Estados del Montacargas (Versión Moore)">
+                </div>
+                <p class="caption">**Diagrama de Estados (Máquina de Moore):** La salida se asocia directamente al estado. Muestra transiciones entre E1, E2 y E3 con sus condiciones de entrada (00, 01, 10). Esto facilita la comprensión de cómo el sistema reacciona ante cada combinación de entradas.</p>
+            </div>
+            
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img3.jpg" alt="Ventana de validación del autómata">
+                </div>
+                <p class="caption">**Validación del Autómata:** La herramienta verifica la corrección del diagrama, detectando que el autómata es "no determinista". Esto permite realizar ajustes para simplificar o corregir el diseño de estados antes de la implementación.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="ecuaciones-boole" class="info-section">
+            <h2>2. Obtención de Ecuaciones Lógicas a partir de Tablas</h2>
+            <p>Con los estados definidos, se procede a la codificación y aplicación de las tablas de transición y excitación para obtener las ecuaciones lógicas que implementarán el circuito.</p>
+
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img6.jpg" alt="Tablas de Transición, Codificación y Excitación para el circuito Moore">
+                </div>
+                <p class="caption">**Tablas de Diseño Final:** Resume el proceso completo: transición de estados, codificación binaria (Q1, Q0), tablas de excitación de biestables (J-K y D), ecuaciones de excitación (J0, K0, J1, K1, D0, D1) y salidas (S0, S1). Permite tener una referencia clara para la implementación del circuito.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="implementacion-circuito" class="info-section">
+            <h2>3. Implementación y Simulación Lógica (Proteus)</h2>
+            <p>Las ecuaciones lógicas se traducen a un esquema digital usando compuertas y biestables, que se puede simular en software como Proteus para validar su funcionamiento.</p>
+            
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img4.jpg" alt="Esquema de circuito usando Biestables J-K">
+                </div>
+                <p class="caption">**Esquema con Biestables J-K:** Implementación usando dos biestables J-K, conectados a las entradas de control (E0, E1) según las ecuaciones lógicas, garantizando la secuencialidad del sistema.</p>
+            </div>
+            
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img5.jpg" alt="Esquema de circuito usando Biestables D">
+                </div>
+                <p class="caption">**Esquema con Biestables D:** Implementación alternativa con biestables D. Más sencillo, ya que la entrada D define la salida deseada en el siguiente ciclo, reflejando directamente D0 y D1.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="aplicacion-tinkercad" class="info-section">
+            <h2>4. Aplicación Práctica y Prototipado (Tinkercad)</h2>
+            <p>Con el diseño lógico verificado, se realiza el prototipado físico o virtual en Tinkercad, simulando la conexión de sensores, motores y LEDs para observar su comportamiento real.</p>
+
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <img src="imagenes-videos/img7.jpg" alt="Montaje de un circuito con Sensores, LEDs y Motores en protoboard">
+                </div>
+                <p class="caption">**Montaje Práctico:** Conexión de dos potenciómetros, dos LEDs y dos motores en protoboard, alimentados con batería de 9V, simulando la operación de un montacargas y la interacción entre sensores y actuadores.</p>
+            </div>
+            
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <video controls>
+                        <source src="imagenes-videos/vid1.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+                <p class="caption">**Video 1 - Actuador Izquierdo:** Muestra la simulación de activación del motor izquierdo (M1) y los cambios de estado de los LEDs, replicando el comportamiento esperado del montacargas.</p>
+            </div>
+
+            <div class="media-block">
+                <div class="media-aspect-wrapper">
+                    <video controls>
+                        <source src="imagenes-videos/vid2.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+                <p class="caption">**Video 2 - Actuador Derecho:** Simula la activación del motor derecho (M2) y la señalización de LEDs, reflejando las salidas del circuito secuencial y el flujo completo de la máquina de estados.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Infografía de Circuitos Secuenciales</p>
+        <a href="index.html" class="btn">Volver a la Presentación</a>
+    </footer>
+</body>
+</html>
